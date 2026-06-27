@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "puppies"
+    label: "Available Puppies"
+    folder: "_data/puppies"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Puppy Name", name: "title", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Color", name: "color", widget: "string" }
+      - { label: "Sex", name: "sex", widget: "select", options: ["Male", "Female"] }
+      - { label: "Status", name: "status", widget: "select", options: ["Available", "Reserved", "Sold"] }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
